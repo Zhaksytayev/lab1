@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        System.out.println(getmingledString(str1, str2));
+    }
+    public static String getmingledString(String str1, String str2) {
+        Scanner scanner = new Scanner(System.in);
+        StringBuilder res = new StringBuilder();
+        for (int i=0; i<str1.length(); i++) {
+            if (i < str1.length()) {
+                res.append(str1.charAt(i));
+            }
+            if (i < str1.length()) {
+                res.append(str2.charAt(i));
+            }
+        }
+
+        return res.toString();
+    }
+}
