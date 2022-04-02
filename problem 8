@@ -1,0 +1,26 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        checker(s);
+    }
+
+    public static String checker(String s) {
+        int a=0;
+        for (int i=0; i<s.length(); i++) {
+            if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+                a = 1;
+            }
+        }
+            if (a==1) {
+                System.out.println("no");
+            }
+            else{
+                System.out.println("yes");
+            }
+        return s;
+    }
+}
