@@ -1,0 +1,23 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int arr[] = new int[1000];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        getAverageSum(arr, n);
+    }
+
+    public static int getAverageSum(int[] arr, int n) {
+        double res = 0;
+        for (int i = 0; i < n; i++) {
+            res += arr[i];
+        }
+        System.out.println(res/n);
+        return 0;
+    }
+}
